@@ -19,18 +19,6 @@ A Python-based Rain Alert application that checks upcoming weather forecasts usi
 - Twilio API
 - Python-dotenv
 
-## Installation
-
-1. Clone this repository.
-2. Install dependencies:
-
-   `pip install -r requirements.txt`
-
-3. Create a `.env` file using `.env.example` as a template.
-4. Add your own API credentials to `.env`.
-5. Run the project:
-
-   `python main.py`
 
 ## Security
 API keys and Twilio credentials are stored in `.env` and are not included in this repository.
