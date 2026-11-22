@@ -10,6 +10,8 @@ owm_endpoint = "https://api.openweathermap.org/data/2.5/forecast"
 api_key = os.getenv("api_key")
 Account_SID = os.getenv("Account_SID")
 Auth_Token = os.getenv("Auth_Token")
+sender = os.getenv("send")
+receiver = os.getenv("rec")
 
 
 
@@ -37,10 +39,10 @@ for hour_data in weather_data["list"]:
 
 
 if will_rain:
-    Client = Client(Account_SID,Auth_Token)
-    message = Client.messages.create(
-        to="+917544981459",
-        from_="+17372508034",
+    client = Client(Account_SID,Auth_Token)
+    message = client.messages.create(
+        to = receiver,
+        from_= sender,
         body="sms_internal_alerts",
 
     )
